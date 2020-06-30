@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Exception Handling Functions</title>
+</head>
+<body>
+	<script language="javascript" type="text/javascript">
+		function split()
+		{
+			var a=[]
+			var txt=String(document.getElementById("p1").innerHTML);
+			a=txt.split(" ");
+			document.write("5th word is:"+a[4]);
+			document.write("7th word is:"+a[6]);
+			document.write("10th word is:"+a[9]);
+		}
+	</script>
+	<div class="strings">
+		String Methods:
+		<h4>Introduction to HTML</h4>
+		<p id="p1">HTML stands for Hyper Text Markup Language
+		HTML is the standard markup language for creating Web pages
+		HTML describes the structure of a Web page
+		HTML consists of a series of elements
+		HTML elements tell the browser how to display the content
+		HTML elements label pieces of content such as "this is a heading", "this is a paragraph", "this is a link", etc.
+
+		HTML code ensures the proper formatting of text and images for your Internet browser. Without HTML, a browser would not know how to display text as elements or load images or other elements. HTML also provides a basic structure of the page, upon which Cascading Style Sheets are overlaid to change its appearance. One could think of HTML as the bones (structure) of a web page, and CSS as its skin (appearance).</p>
+		<button onclick="split()">Click here to check the words</button></div>
+</body>
+</html>
