@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>hide demo</title>
+  <style>
+  span {
+    background: #blue;
+    padding: 3px;
+    float: center;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+<body>
+ 
+<button id="hider">Click Here to Hide</button>
+<button id="shower">Click Here to Show</button>
+<div>
+  <span>My</span> <span>Name</span> <span>is</span>
+  <span>SAITEJA</span> <span>and</span> <span>I</span>
+  <span>am </span> <span>studying</span><span>mechanical</span><span>Engineering</span><span>Currently</span><span>I</span><span>am </span><span>doing </span><span>Remote Digital Internship</span><span>in </span><span>IIITH</span>
+</div>
+ 
+<script>
+$( "#hider" ).click(function() {
+  $( "span:last-child" ).hide( "fast", function() {
+    $( this ).prev().hide( "fast", arguments.callee );
+  });
+});
+$( "#shower" ).click(function() {
+  $( "span" ).show( 2000 );
+});
+</script>
+ 
+</body>
+</html>
